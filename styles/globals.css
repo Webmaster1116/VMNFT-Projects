@@ -1,0 +1,82 @@
+@font-face {
+	font-family: NeueMachina;
+	src: url('/fonts/NeueMachina-Light.ttf');
+}
+
+@font-face {
+	font-family: NeueMachinaUltrabold;
+	src: url('/fonts/NeueMachina-Ultrabold.ttf');
+}
+
+
+:root {
+	--green: 19, 255, 156;
+	--black: #111111;
+	--white: #ebebeb;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'NeueMachina', sans-serif;
+	background-image: url('/images/main-background.jpg');
+    background-size: cover;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	border: none;
+	background: none;
+	outline: none;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb( var(--green) );
+}
+
+::selection {
+	color: var(--black);
+	background: rgb( var(--green) );
+}
+
+::-moz-selection {
+	color: var(--black);
+	background: rgb( var(--green) );
+}

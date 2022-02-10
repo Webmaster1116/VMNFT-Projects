@@ -1,0 +1,54 @@
+.link {
+	position: relative;
+	width: min-content;
+	min-width: 10rem;
+	min-height: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	font-family: 'NeueMachinaUltrabold', sans-serif;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(var(--green), 0.4);
+	color: var(--white);
+	background-color: var(--black);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.link:hover,
+.link:focus {
+	box-shadow: 0 0 20px rgba(var(--green), 0.5);
+}
+
+.link:active {
+	color: rgb( var(--green) );
+}
+
+.link > span {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background-color: rgba(var(--green), 0.15);
+	transition: all 0.5s ease;
+	transform: translate(-50%, -50%);
+}
+
+.link:hover > span,
+.link:active > span {
+	width: var(--button-width);
+	height: var(--button-width);
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+	.link {
+		min-width: 8rem;
+		min-height: 3rem;	
+		font-size: 1rem;
+	}
+}

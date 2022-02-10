@@ -1,0 +1,54 @@
+.button {
+	position: relative;
+	min-width: 10rem;
+	min-height: 4rem;
+	padding: 0.5rem 1rem;
+	font-family: 'NeueMachinaUltrabold', sans-serif;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(var(--green), 0.4);
+	color: var(--white);
+	background-color: var(--black);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+	box-shadow: 0 0 20px rgba(var(--green), 0.5);
+}
+
+.button:active {
+	color: rgb( var(--green) );
+}
+
+.button:disabled {
+	opacity: 0.8;
+	pointer-events: none;
+}
+
+.button > span {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background-color: rgba(var(--green), 0.15);
+	transition: all 0.5s ease;
+	transform: translate(-50%, -50%);
+}
+
+.button:hover > span,
+.button:active > span {
+	width: var(--button-width);
+	height: var(--button-width);
+}
+
+
+@media only screen and (max-width: 1300px) {
+	.button {
+		min-width: 8rem;
+		min-height: 3rem;	
+		font-size: 1rem;
+	}
+}
